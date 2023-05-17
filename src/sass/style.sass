@@ -1,0 +1,170 @@
+
+*
+    box-sizing: border-box
+
+@import "abstract/_varible"
+@import "abstract/_mixsins"
+@import "abstract/_function"
+
+@import "base/_animation"
+@import "base/_base"
+@import "base/_typoraphy"
+@import "base/_utilities"
+
+@import "components/_button"
+@import "components/main-section"
+@import "components/logo"
+@import "components/second-section"
+@import "components/dropdown"
+@import "components/third-section"
+@import "components/footer"
+
+@import "pages/_home"
+
+@import "layout/_heder"
+
+
+//горизонтальный планшет
+@media (max-width: 1199px)
+    .container
+        width: 960px
+    html
+        font-size: 9px
+    .arrow
+        display: inline-block
+        width: 0
+        height: 0
+        padding: .1rem
+        border-top: 1rem solid $color-yellow
+        border-right: .7rem solid transparent
+        border-left: .7rem solid transparent
+    .dropdown
+        &__item
+            display: none
+            &:active
+                display: flex
+        &__arrow
+            &:active 
+                border-top-color: black
+                background: $color-yellow
+        
+//вертикальеный планшет
+@media  (max-width: 991px)
+    .container
+        width: 720px
+    html
+        font-size: 8px
+    .main-img
+        height: 67vw
+    h1
+        font-size: 4.2rem
+    
+//горизонтальный телефон
+@media (max-width: 767px)
+    .container
+        width: 540px
+        min-height: 5vw
+    html
+        font-size: 6px
+
+
+//вертикальный телефон
+@media (max-width: 575px)
+    .container
+        width: 100%
+    html
+        font-size: 9px
+    .main-section
+        height: 100vh
+        overflow: hidden
+        &__container
+            margin-top: 20px
+            
+    .hr_box
+        display: none
+    .hr_box__mobile
+        display: block
+    h1
+        font-size: 10vw
+        color: white
+        padding-top: 2vw
+        padding-bottom: 2vw
+        font-family: 'Rubik Mono One', sans-serif
+        font-weight: 700
+        text-shadow: 3vw 3vw 8vw #5473B6,  -3vw -3vw 8vw #F8E31A
+        -webkit-text-stroke: 0.5px white
+        -webkit-text-fill-color: transparent
+        letter-spacing: 4vw
+        text-align: center
+        
+    .left-wraper
+        position: absolute
+        left: -212px
+        display: flex
+        flex-wrap: wrap
+        align-content: flex-end
+    .main-img
+        height: 87rem
+    .right-wraper
+        padding-top: 3rem
+        margin-left: 20rem
+        &__icon-box
+            display: none
+            margin-bottom: 2rem
+        &__button-box
+            display: inline-flex
+            justify-content: center
+            margin-left: 1rem
+        &__btn
+            text-transform: uppercase
+    .nav-menu
+        position: fixed
+        display: flex
+        flex-wrap: wrap
+        align-items: end
+        top: 0
+        right: -100%
+        height: 30rem
+        width: 30vw
+        z-index: 7
+        transition: 1s all
+        flex-direction: column
+        justify-content: space-evenly
+        margin-right: 0
+        &__btn
+            margin-right: 0
+            &:last-child
+                margin-right: 0
+        
+    .hamburger
+        width: 30px
+        position: fixed
+        top: 15px
+        right: 30px
+        height: 14px
+        z-index: 11
+        &__span
+            height: 2px
+            width: 100%
+            display: block
+            background: $color-yellow
+            margin-bottom: 6px
+            transition: 1s all
+            &:last-child
+                margin-bottom: 0
+    .hamburger_active
+        .hamburger__span
+            margin-bottom: -2px
+            &:nth-last-child(1)
+                transform: translateY(3px) rotate(-45deg)
+            &:nth-last-child(2)
+                display: none
+            &:nth-last-child(3)
+                transform: translateY(3px) rotate(45deg)
+    .nav-menu_active
+        right: 80px
+    //.dropdown
+        &__link
+            font-size: 18px
+            line-height: 25px
+            letter-spacing: 2px

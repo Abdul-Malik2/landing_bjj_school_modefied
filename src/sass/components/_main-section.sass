@@ -1,0 +1,62 @@
+.main-section     
+    position: relative
+    min-height: 73rem
+    background-image: url(../img/bacground4.jpg)
+    background-position: center
+    background-size: cover
+    overflow: hidden
+    &__nav
+        display: flex
+        justify-content: end
+        padding-top: 3rem
+        padding-bottom: 3rem
+    &__content
+        display: flex
+        justify-content: space-around
+
+    &__right-wraper
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+        align-items: center
+
+.left-wraper
+    display: flex
+    flex-wrap: wrap
+    align-content: flex-end
+.main-img
+    height: 40vw
+    @include animation-mix (departure, 1s, 2s, 1)
+.right-wraper
+    &__icon-box
+        margin-bottom: 6rem
+    &__button-box
+        display: inline-flex
+        justify-content: center
+    &__logo-box
+        position: relative
+        width: 20rem
+        margin-bottom: 25rem
+        margin-left: 1.5rem
+        z-index: 5
+.icon-box
+    display: inline-flex
+.logo-box__item
+    position: absolute
+.fa-brands
+    font-size: 4rem
+    color: $color-yellow
+    border: none
+    position: relative
+    
+.icon-box__item
+    position: relative
+    margin-right: 1.5rem
+    @include animation-mix (departure, 2s, 7s, 1)
+    &:last-child
+        margin: 0
+    
+i:hover
+    border-radius: 10rem
+    border-color: $color-yellow
+    box-shadow: 0 0 3rem 

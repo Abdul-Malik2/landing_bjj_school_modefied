@@ -1,0 +1,100 @@
+// анимация заголовка
+@keyframes departure_hr-blue
+    0%
+        transform: translateX(-140rem)
+    70%
+        transform: translateX(4rem)
+
+@keyframes departure_hr-yellow
+    0%
+        transform: translateX(140rem)
+    70%
+        transform: translateX(-4rem)
+
+@keyframes departure_title
+    0%
+        opacity: 0 // чтобы плавнопоявлялось
+        
+    100%
+        opacity: 1
+//----------------------------------------------
+
+//анимация логотипа
+@keyframes fli_blue
+    0%
+        transform: rotate(760deg)
+        top: -60rem
+        left: -70rem
+    100%
+        transform: rotate(0deg)
+        top: .1rem
+        left: .1rem
+
+@keyframes fli_grap_pancr
+    0%
+        top: -40rem
+    100%
+        transform: rotate(0deg)
+        top: 1.5rem
+        left: 1.5rem
+
+@keyframes fli_lutador
+    0%
+        top: 100rem
+    100%
+        top: 16rem
+        left: 6,5rem
+
+@keyframes fli_yellow
+    0%
+        transform: rotate(-560deg)
+        top: 60rem
+        left:  70rem
+    50%
+        transform: rotate(0deg)
+        top: 4rem
+        left: 4rem
+    100%
+        transform: rotate(0deg)
+
+@keyframes fli_wreslers
+    0%
+        top: 6rem
+        left: 70rem
+    50%
+        top: 6rem
+        left: 40rem    
+    100%
+        top: 6rem
+        left: 6rem
+
+// анимация кнопки
+@keyframes departure
+    0%
+        opacity: 0 // чтобы плавнопоявлялось
+    10%
+        opacity: .1
+    30%
+        opacity: .2
+        
+    100%
+        opacity: 1
+
+//анимация бликов на кнопке
+    // блик главной кнопки
+@keyframes ligh
+    0%
+        transform: translateX(-8rem) skewX(-45deg)
+    20%
+        transform: translateX(30rem) skewX(-45deg)
+    100%
+        transform: translateX(30rem) skewX(-45deg)
+    // блик при наведении на кнопки
+@keyframes ligh-touch
+    from
+        transform: translateX(-8rem) skewX(-45deg)
+    to
+        transform: translateX(30rem) skewX(-45deg)
+
+
+

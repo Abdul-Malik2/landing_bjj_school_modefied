@@ -1,0 +1,39 @@
+a
+    -webkit-tap-highlight-color: transparent // чтобы при нажатии не меняла цвет
+.dropdown
+    &__wrapper
+        display: flex
+        cursor: pointer // чтобы меню на айфоне тоже раскрывалось 
+        flex-direction: column
+        position: absolute
+        top: 38vw
+        background-color: black
+        font-weight: bold
+        color: $color-yellow
+        z-index: 3
+        &:hover >.dropdown__item // знак ">", означает  при наведении на родителя отображается только его прямой потомок(на будующее если надо будет добавить подменю)
+            display: flex 
+        &:focus >.dropdown__item //свойство focus-within, чтобы при наведении tab открывалось меню, просто focus не сработает
+            display: flex
+    &__item
+        text-align: start
+        color: $color-yellow
+        text-decoration: none
+        white-space: nowrap
+        display: none
+    &__link
+        font-size: 2.5rem
+        line-height: 2.5rem
+        width: 100%
+        text-decoration: none
+        color: $color-yellow
+        padding: .3rem
+        letter-spacing: .6rem //мeжбуквенное рассояние
+        -webkit-tap-highlight-color: transparent // чтобы при нажатии не меняла цвет
+        &:hover
+            color: black
+            background: $color-yellow
+        &:focus // действия при нажатии tab
+            outline: none // отключаем заводскую подсветку при на жатии tab
+            color: black
+            background: $color-yellow
